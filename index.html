@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J Harold Relevant, Inc. | Fence Contractor in Pensacola, FL</title>
+<meta name="description" content="Wood, aluminum, vinyl and chain link fence installation and repair in Pensacola, FL. Licensed and insured. Call (850) 516-6781 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --oak: #1E2B23;
+    --oak-2: #27382D;
+    --oak-line: #3A4D40;
+    --sage: #E4E9E1;
+    --paper: #F5F7F3;
+    --pine: #E2B95B;
+    --pine-deep: #C99A35;
+    --ink: #15201A;
+    --muted: #55645A;
+    --on-dark: #E9EEE6;
+    --on-dark-muted: #A9B8AD;
+
+    --display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+    --body: "Public Sans", system-ui, sans-serif;
+
+    --gutter: clamp(20px, 5vw, 64px);
+    --max: 1240px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body {
+    margin: 0;
+    background: var(--sage);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--pine); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: .005em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  h2 { font-size: clamp(2.75rem, 6vw, 4.75rem); }
+  p { margin: 0; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: .6em;
+    padding: .95em 1.4em;
+    font: 600 1rem/1 var(--body);
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color .15s, color .15s, border-color .15s;
+  }
+  .btn svg { width: 1.05em; height: 1.05em; flex: none; }
+  .btn-pine { background: var(--pine); color: var(--ink); }
+  .btn-pine:hover { background: #ECC872; }
+  .btn-line { border: 1.5px solid var(--oak-line); color: var(--on-dark); }
+  .btn-line:hover { border-color: var(--on-dark-muted); }
+  .btn-ink { background: var(--ink); color: var(--paper); }
+  .btn-ink:hover { background: var(--oak-2); }
+
+  /* Header */
+  .site-head {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--oak);
+    color: var(--on-dark);
+    border-bottom: 1px solid var(--oak-line);
+  }
+  .site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 72px; }
+  .brand { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
+  .brand b { font: 900 1.6rem/1 var(--display); text-transform: uppercase; letter-spacing: .01em; }
+  .brand span { font-size: .78rem; color: var(--on-dark-muted); margin-top: 4px; }
+  .nav { display: flex; align-items: center; gap: 30px; }
+  .nav a:not(.btn) { text-decoration: none; font-size: .95rem; color: var(--on-dark-muted); }
+  .nav a:not(.btn):hover { color: var(--on-dark); }
+  .nav .btn { padding: .7em 1.05em; font-size: .95rem; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    background: var(--oak);
+    color: var(--on-dark);
+    padding: clamp(48px, 8vw, 104px) 0 0;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: end;
+  }
+  .hero h1 {
+    font-size: clamp(3.6rem, 9.6vw, 8.6rem);
+    font-weight: 900;
+    line-height: .86;
+  }
+  .hero-copy p {
+    max-width: 34em;
+    margin-top: 28px;
+    font-size: 1.15rem;
+    color: var(--on-dark-muted);
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .proof {
+    display: flex; flex-wrap: wrap; gap: 10px 28px;
+    margin: 40px 0 0; padding: 0; list-style: none;
+    font-size: .95rem; color: var(--on-dark);
+  }
+  .proof li { display: flex; align-items: center; gap: 8px; }
+  .proof svg { width: 18px; height: 18px; color: var(--pine); }
+  .stars { color: var(--pine); letter-spacing: 2px; }
+
+  .hero-grid { padding-bottom: clamp(88px, 11vw, 150px); }
+  .hero-photo { position: relative; margin: 0; }
+  .hero-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 38% 50%;
+    border-radius: 2px;
+  }
+  .hero-photo figcaption {
+    margin-top: 12px;
+    font-size: .85rem;
+    color: var(--on-dark-muted);
+  }
+
+  /* The picket line: pale pickets rise along the bottom of the hero and become the next section */
+  .pickets {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: clamp(56px, 8vw, 104px);
+    display: flex; gap: clamp(6px, .9vw, 12px);
+    padding: 0 clamp(6px, .9vw, 12px);
+    pointer-events: none;
+  }
+  .pickets i {
+    flex: 1 1 0;
+    background: var(--sage);
+    clip-path: polygon(0 18%, 50% 0, 100% 18%, 100% 100%, 0 100%);
+    transform-origin: bottom;
+    animation: raise .7s cubic-bezier(.2, .8, .2, 1) both;
+    animation-delay: calc(var(--i) * 28ms + 250ms);
+  }
+  .pickets::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--sage);
+  }
+  @keyframes raise { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+
+  /* Services */
+  .services { padding: clamp(56px, 8vw, 112px) 0 clamp(64px, 9vw, 120px); }
+  .services-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 96px); }
+  .services-intro { align-self: start; position: sticky; top: 112px; }
+  .services-intro p { margin-top: 22px; max-width: 26em; color: var(--muted); }
+  .service-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+  .service-list li {
+    display: grid; grid-template-columns: 1fr 1.25fr; gap: 12px 32px;
+    padding: 26px 0 28px;
+    border-bottom: 1px solid #C3CCC2;
+  }
+  .service-list h3 { font-size: clamp(1.75rem, 2.6vw, 2.25rem); font-weight: 800; line-height: .95; }
+  .service-list p { color: var(--muted); }
+
+  /* Repair band */
+  .repair { background: var(--pine); color: var(--ink); padding: clamp(56px, 8vw, 104px) 0; }
+  .repair-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 6vw, 96px); align-items: end; }
+  .repair h2 { font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; }
+  .repair-body p { font-size: 1.15rem; max-width: 30em; }
+  .repair-body p + p { margin-top: 16px; }
+  .repair-body .btn { margin-top: 30px; }
+  .repair blockquote {
+    margin: 26px 0 0; padding-left: 18px;
+    border-left: 3px solid var(--ink);
+    font-style: italic;
+  }
+  .repair blockquote cite { display: block; margin-top: 6px; font-style: normal; font-size: .9rem; font-weight: 600; }
+
+  /* Process */
+  .process { background: var(--paper); padding: clamp(64px, 9vw, 120px) 0; }
+  .process-head { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; }
+  .process-head p { max-width: 28em; color: var(--muted); }
+  .steps {
+    list-style: none; margin: clamp(40px, 5vw, 64px) 0 0; padding: 0;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    counter-reset: step;
+  }
+  .steps li {
+    counter-increment: step;
+    padding: 0 28px 0 0;
+    margin-right: 28px;
+    border-right: 1px solid #CDD5CB;
+  }
+  .steps li:last-child { border-right: 0; margin-right: 0; }
+  .steps li::before {
+    content: counter(step);
+    display: block;
+    font: 900 clamp(4rem, 7vw, 5.75rem)/.8 var(--display);
+    color: var(--pine-deep);
+    margin-bottom: 22px;
+  }
+  .steps h3 { font-size: 1.65rem; font-weight: 800; margin-bottom: 10px; }
+  .steps p { color: var(--muted); font-size: 1rem; }
+
+  /* Reviews */
+  .reviews { background: var(--oak); color: var(--on-dark); padding: clamp(64px, 9vw, 120px) 0; }
+  .reviews-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+  .rating { display: flex; align-items: center; gap: 14px; color: var(--on-dark-muted); font-size: .95rem; }
+  .rating strong { font: 900 3.25rem/1 var(--display); color: var(--on-dark); }
+  .review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); margin-top: clamp(40px, 5vw, 64px); }
+  .review { margin: 0; padding-top: 26px; border-top: 1px solid var(--oak-line); }
+  .review .stars { font-size: 1rem; }
+  .review blockquote { margin: 16px 0 0; }
+  .review blockquote p { font-size: 1.1rem; line-height: 1.7; color: var(--on-dark); max-width: 36em; }
+  .review figcaption { margin-top: 22px; display: flex; gap: 12px; align-items: baseline; }
+  .review figcaption b { font: 800 1.35rem/1 var(--display); text-transform: uppercase; letter-spacing: .02em; }
+  .review figcaption span { font-size: .88rem; color: var(--on-dark-muted); }
+
+  /* Contact */
+  .contact { padding: clamp(64px, 9vw, 120px) 0; }
+  .contact-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(40px, 6vw, 96px); align-items: start; }
+  .contact h2 { font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; }
+  .contact-lede { margin-top: 22px; max-width: 30em; color: var(--muted); font-size: 1.1rem; }
+  .big-phone {
+    display: inline-block; margin-top: 34px;
+    font: 900 clamp(2.75rem, 7vw, 5.5rem)/1 var(--display);
+    text-decoration: none;
+    border-bottom: 4px solid var(--pine);
+    padding-bottom: 4px;
+  }
+  .big-phone:hover { border-color: var(--ink); }
+  .details { display: grid; gap: 32px; }
+  .details h3 { font-size: 1.5rem; margin-bottom: 10px; }
+  .details p { color: var(--muted); }
+  .hours { width: 100%; border-collapse: collapse; font-size: 1rem; }
+  .hours th, .hours td { text-align: left; padding: 10px 0; border-bottom: 1px solid #C3CCC2; }
+  .hours th { font-weight: 500; }
+  .hours td { text-align: right; color: var(--muted); }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .badges span { font-size: .9rem; padding: 6px 12px; border: 1px solid #B9C3B8; border-radius: 3px; }
+
+  /* Footer */
+  .site-foot { background: var(--oak); color: var(--on-dark-muted); padding: 40px 0 44px; font-size: .9rem; }
+  .site-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; align-items: center; }
+  .site-foot nav { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+  .site-foot a { text-decoration: none; }
+  .site-foot a:hover { color: var(--on-dark); }
+  .site-foot .brand b { color: var(--on-dark); font-size: 1.4rem; }
+
+  /* Mobile call bar */
+  .callbar { display: none; }
+
+  @media (max-width: 960px) {
+    .nav a:not(.btn) { display: none; }
+    .hero-grid, .services-grid, .repair-grid, .contact-grid, .review-grid { grid-template-columns: 1fr; }
+    .services-intro { position: static; }
+    .hero-photo img { aspect-ratio: 4 / 3; }
+    .steps { grid-template-columns: 1fr 1fr; row-gap: 48px; }
+    .steps li:nth-child(2) { border-right: 0; margin-right: 0; }
+  }
+  @media (max-width: 640px) {
+    body { padding-bottom: 72px; }
+    .site-head .wrap { height: 64px; }
+    .brand b { font-size: 1.35rem; }
+    .nav .btn span { display: none; }
+    .nav .btn { padding: .7em; }
+    .service-list li { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .steps li { border-right: 0; margin-right: 0; padding: 0 0 36px; border-bottom: 1px solid #CDD5CB; }
+    .steps li:last-child { border-bottom: 0; padding-bottom: 0; }
+    .hero-actions .btn { flex: 1 1 100%; justify-content: center; }
+    .callbar {
+      display: flex; position: fixed; z-index: 30; left: 0; right: 0; bottom: 0;
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+      background: var(--oak); border-top: 1px solid var(--oak-line);
+    }
+    .callbar .btn { flex: 1; justify-content: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .pickets i { animation: none; }
+  }
+  .pickets.settled i { animation: none; }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="J Harold Relevant, Inc. home">
+      <b>J Harold Relevant</b>
+      <span>Fence contractor, Pensacola</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#repairs">Repairs</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-pine" href="tel:+18505166781" aria-label="Call (850) 516-6781">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(850) 516-6781</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-title">Fences built for Gulf Coast weather</h1>
+        <p>J Harold Relevant, Inc. installs and repairs wood, aluminum, vinyl and chain link fencing across Pensacola and the surrounding communities. Estimates are free.</p>
+        <div class="hero-actions">
+          <a class="btn btn-pine" href="tel:+18505166781">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call for a free estimate
+          </a>
+          <a class="btn btn-line" href="#services">See what we build</a>
+        </div>
+        <ul class="proof">
+          <li><span class="stars" aria-hidden="true">★★★★★</span> 5.0 on Google</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Licensed and insured</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Locally owned</li>
+        </ul>
+      </div>
+      <figure class="hero-photo">
+        <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLctQFup5qxqNBRY6LNJ8_BDKdnOCX8KP1oDJzTKB7zN9m8G2RlGUOYPJ7E4D0Fi1rVJEvtD1NVM8sNqd3p7N-Q6RHuWNOyrGRfLvmr8xO2KHVgNBBAEbdd6NxqMCaYODr4OXIYA=w1600"
+             alt="Black ornamental aluminum fence installed around a backyard in Pensacola" width="1600" height="1200" fetchpriority="high">
+        <figcaption>Ornamental aluminum, Pensacola</figcaption>
+      </figure>
+    </div>
+    <div class="pickets" aria-hidden="true"></div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap services-grid">
+      <div class="services-intro">
+        <h2 id="services-title">What we build and fix</h2>
+        <p>Residential and commercial work, from a full new perimeter to a single gate that won't latch. Not sure which material suits your yard? We'll walk it with you.</p>
+      </div>
+      <ul class="service-list">
+        <li>
+          <h3>Wood privacy fences</h3>
+          <p>Cedar, pine and pressure-treated builds, set to stay straight and solid for years.</p>
+        </li>
+        <li>
+          <h3>Aluminum and ornamental iron</h3>
+          <p>Decorative metal fencing and pool enclosures that won't rust in the salt air.</p>
+        </li>
+        <li>
+          <h3>Vinyl and composite</h3>
+          <p>Low-maintenance fencing that resists fading, rot and warping in the Florida sun.</p>
+        </li>
+        <li>
+          <h3>Chain link and security</h3>
+          <p>Cost-effective residential and commercial fencing, with privacy slats if you want them.</p>
+        </li>
+        <li>
+          <h3>Custom gates and openers</h3>
+          <p>Driveway and walk gates with heavy-duty hinges, keypad access and automatic openers.</p>
+        </li>
+        <li>
+          <h3>Repairs and post replacement</h3>
+          <p>Storm damage, leaning posts, broken pickets and sagging gates, fixed promptly.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="repair" id="repairs" aria-labelledby="repair-title">
+    <div class="wrap repair-grid">
+      <h2 id="repair-title">Just need a gate fixed? We'll take the job.</h2>
+      <div class="repair-body">
+        <p>Plenty of fence companies only want new installs. We fix the gate that hasn't closed right since the last hurricane, straighten the section a car backed into, and replace the posts that started leaning.</p>
+        <blockquote>
+          <p>“I called a few fence companies and none would work on just gates.”</p>
+          <cite>Blue Yeti, Google review</cite>
+        </blockquote>
+        <a class="btn btn-ink" href="tel:+18505166781">Call about a repair</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="process-head">
+        <h2 id="process-title">How a job goes</h2>
+        <p>Every job is handled by Joe and his crew, from the first phone call to the final walkthrough.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Call us</h3>
+          <p>Tell us what you need: a new fence, a gate that won't close, or storm damage.</p>
+        </li>
+        <li>
+          <h3>Free estimate</h3>
+          <p>We come out, measure, look at the ground and the old fence, and give you a clear price.</p>
+        </li>
+        <li>
+          <h3>Updates as we go</h3>
+          <p>We call when materials come in and let you know before we arrive to do the work.</p>
+        </li>
+        <li>
+          <h3>Clean finish</h3>
+          <p>We test every gate, haul off the old material and leave your yard tidy.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head">
+        <h2 id="reviews-title">What neighbors say</h2>
+        <div class="rating">
+          <strong>5.0</strong>
+          <div><span class="stars" aria-hidden="true">★★★★★</span><br>Google rating</div>
+        </div>
+      </div>
+      <div class="review-grid">
+        <figure class="review">
+          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>
+            <p>Joe is a perfectionist, and it shows in his work. The fence around our carport was a hot mess, with decayed wood panels, a section of chain link that had been hit by a car, and a wonky little gate about 2 feet wide that had to be chained shut and barricaded. Once he got the gate, Joe fixed the whole thing in only a couple of days — built a nice strong wood fence, straightened up the bent section, and put in a wonderful 5-ft gate that is so much more secure. I also greatly appreciated his regular calls with updates on the gate and letting me know when he was coming to do the work.</p>
+          </blockquote>
+          <figcaption><b>TJ Neal</b><span>Google review</span></figcaption>
+        </figure>
+        <figure class="review">
+          <span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>
+          <blockquote>
+            <p>My vinyl fence gates haven’t worked right since hurricane Sally. I called a few fence companies and none would work on just gates. One fence co gave me Joey’s number so I gave him a call. He came out the following day to see what the problem was and had my gates fixed the following week. They work better now than when Lowe’s installed them 6 years ago. Joey and his assistant T were so pleasant and friendly. No mess was left behind and his rate was beyond reasonable. Excellent work and super people. Couldn’t be happier with hiring them!</p>
+          </blockquote>
+          <figcaption><b>Blue Yeti</b><span>Google review</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="contact-title">Get a free estimate</h2>
+        <p class="contact-lede">Call and tell us about the job. We'll set a time to come out, take measurements and give you a price.</p>
+        <a class="big-phone" href="tel:+18505166781">(850) 516-6781</a>
+      </div>
+      <div class="details">
+        <div>
+          <h3>Service area</h3>
+          <p>Pensacola, FL and surrounding communities</p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Monday to Friday</th><td>8:00 AM – 5:00 PM</td></tr>
+              <tr><th scope="row">Saturday</th><td>By appointment</td></tr>
+              <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="badges">
+          <span>Licensed and insured</span>
+          <span>Free estimates</span>
+          <span>Residential and commercial</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>J Harold Relevant, Inc.</b></a>
+    <nav aria-label="Footer">
+      <a href="#services">Services</a>
+      <a href="#repairs">Repairs</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:+18505166781">(850) 516-6781</a>
+    </nav>
+    <p>© <span id="year">2026</span> J Harold Relevant, Inc. Pensacola, FL</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-pine" href="tel:+18505166781">Call for a free estimate</a>
+</div>
+
+<script>
+  // Build the picket row to fit the viewport width
+  (function () {
+    var row = document.querySelector('.pickets');
+    function build() {
+      var w = window.innerWidth;
+      var n = Math.max(14, Math.round(w / (w < 640 ? 30 : 44)));
+      if (row.childElementCount === n) return;
+      var html = '';
+      for (var i = 0; i < n; i++) html += '<i style="--i:' + i + '"></i>';
+      row.innerHTML = html;
+    }
+    build();
+    var t;
+    window.addEventListener('resize', function () {
+      clearTimeout(t);
+      t = setTimeout(function () {
+        row.classList.add('settled');
+        build();
+      }, 150);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
